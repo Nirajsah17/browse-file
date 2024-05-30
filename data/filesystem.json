@@ -1,0 +1,119 @@
+{
+  "name": "root",
+  "type": "directory",
+  "created": "2024-01-01T12:00:00Z",
+  "modified": "2024-05-01T12:00:00Z",
+  "permissions": "rwxr-xr-x",
+  "children": [
+    {
+      "name": "Documents",
+      "type": "directory",
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rwxr-xr-x",
+      "children": [
+        {
+          "name": "Work",
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "report.docx",
+              "type": "file",
+              "size": 15000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            },
+            {
+              "name": "presentation.pptx",
+              "type": "file",
+              "size": 45000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        },
+        {
+          "name": "Personal",
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "diary.txt",
+              "type": "file",
+              "size": 5000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Photos",
+      "type": "directory",
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rwxr-xr-x",
+      "children": [
+        {
+          "name": "Vacations",
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "beach.png",
+              "type": "file",
+              "size": 600000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            },
+            {
+              "name": "mountains.jpg",
+              "type": "file",
+              "size": 800000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        },
+        {
+          "name": "Events",
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "wedding.jpg",
+              "type": "file",
+              "size": 950000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "notes.txt",
+      "type": "file",
+      "size": 3000,
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rw-r--r--"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Filesystem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the directory or file"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["directory", "file"],
+      "description": "The type of the item, either directory or file"
+    },
+    "children": {
+      "type": "array",
+      "description": "Array of child directories and files",
+      "items": {
+        "$ref": "#"
+      },
+      "minItems": 1
+    },
+    "size": {
+      "type": "integer",
+      "description": "The size of the file in bytes",
+      "minimum": 0
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The creation time of the file or directory"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The last modification time of the file or directory"
+    },
+    "permissions": {
+      "type": "string",
+      "description": "Permissions of the file or directory in UNIX format"
+    }
+  },
+  "required": ["name", "type"],
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "directory" } }
+      },
+      "then": {
+        "required": ["children"],
+        "properties": {
+          "children": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "file" } }
+      },
+      "then": {
+        "required": ["size"],
+        "properties": {
+          "size": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  ]
+}
