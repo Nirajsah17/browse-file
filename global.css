@@ -1,0 +1,132 @@
+/* Foreground Colors */
+:root {
+  --fg-default: #24292f;
+  --fg-muted: #57606a;
+  --fg-subtle: #6e7781;
+  --fg-accent: #6f42c1;
+  --fg-success: #22c55e;
+  --fg-attention: #f59e0b;
+  --fg-severe: #d97706;
+  --fg-danger: #d41976;
+  --fg-done: #8250df;
+  --fg-sponsors: #bf5af2;
+  --fg-emphasis: #24292f;
+}
+
+/* Background Colors */
+:root {
+  --bg-default: #ffffff;
+  --bg-overlay: #ffffff91;
+  --bg-inset: #f6f8fa;
+  --bg-subtle: #8d9094c5;
+  --bg-emphasis: #24292f;
+  --bg-accent: #f5f0ff;
+  --bg-accent-emphasis: #e5dbfe;
+  --bg-success: #dff7e0;
+  --bg-success-emphasis: #bef5cb;
+  --bg-attention: #fff8c5;
+  --bg-attention-emphasis: #ffeeba;
+  --bg-severe: #fff3c4;
+  --bg-severe-emphasis: #ffe89e;
+  --bg-danger: #ffe3e3;
+  --bg-danger-emphasis: #ffbebe;
+  --bg-done: #f5f0ff;
+  --bg-done-emphasis: #e5dbfe;
+  --bg-sponsors: #fdf4ff;
+  --bg-sponsors-emphasis: #f8e3fe;
+}
+
+/* Accent Colors */
+:root {
+  --accent-emphasis: #6f42c1;
+  --accent-muted: #d9d1e9;
+  --accent-subtle: #e9e5f1;
+}
+
+/* Success Colors */
+:root {
+  --success-emphasis: #22c55e;
+  --success-muted: #bbf7d0;
+  --success-subtle: #dcfce7;
+}
+
+/* Attention Colors */
+:root {
+  --attention-emphasis: #f59e0b;
+  --attention-muted: #fef08a;
+  --attention-subtle: #fef9c3;
+}
+
+/* Severe Colors */
+:root {
+  --severe-emphasis: #d97706;
+  --severe-muted: #fde68a;
+  --severe-subtle: #fef3c7;
+}
+
+/* Danger Colors */
+:root {
+  --danger-emphasis: #d41976;
+  --danger-muted: #fad2e1;
+  --danger-subtle: #fde9f1;
+}
+
+/* Open Colors */
+:root {
+  --open-emphasis: #2ea043;
+  --open-muted: #bfedbf;
+  --open-subtle: #defbde;
+}
+
+/* Closed Colors */
+:root {
+  --closed-emphasis: #0969da;
+  --closed-muted: #bae6fd;
+  --closed-subtle: #e0f2fe;
+}
+
+/* Done Colors */
+:root {
+  --done-emphasis: #8250df;
+  --done-muted: #d8c4fa;
+  --done-subtle: #ede5fe;
+}
+
+/* Sponsors Colors */
+:root {
+  --sponsors-emphasis: #bf5af2;
+  --sponsors-muted: #f6d8ff;
+  --sponsors-subtle: #fbeafe;
+}
+
+/* Border Colors */
+:root {
+  --border-default: #d0d7de;
+  --border-muted: #d8dee4;
+  --border-subtle: #e5e9ec;
+  --border-accent: #6f42c1;
+  --border-accent-emphasis: #6f42c1;
+  --border-success: #22c55e;
+  --border-success-emphasis: #22c55e;
+  --border-attention: #f59e0b;
+  --border-attention-emphasis: #f59e0b;
+  --border-severe: #d97706;
+  --border-severe-emphasis: #d97706;
+  --border-danger: #d41976;
+  --border-danger-emphasis: #d41976;
+  --border-done: #8250df;
+  --border-done-emphasis: #8250df;
+  --border-sponsors: #bf5af2;
+  --border-sponsors-emphasis: #bf5af2;
+}
+
+::selection {
+  background-color: #e2eaebf5; /* Custom background color */
+  color: #1b1916;            /* Custom text color */
+}
+
+/* For Firefox (optional) */
+::-moz-selection {
+  background-color: #e2eaebf5; /* Custom background color */
+  color: #1b1916;            /* Custom text color */
+}

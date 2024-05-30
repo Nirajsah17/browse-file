@@ -1,20 +1,20 @@
 class FileList extends HTMLElement {
   constructor() {
     super();
-    this.id = "lejfoeifip"
-    this.name = "mkdocs.sh";
-    this.type = "program";
-    this.extension = "sh";
-    this.size = "15000";
-    this.modified ="3 May"
-    this.permissions ="drwxrwxr-x";
-    this.owner = "john"
+    // this.id = "lejfoeifip"
+    // this.name = "mkdocs.sh";
+    // this.type = "program";
+    // this.extension = "sh";
+    // this.size = "15 MB";
+    // this.modified ="3 May"
+    // this.permissions ="drwxrwxr-x";
+    // this.owner = "john"
   }
 
   static get observedAttributes() {
-    return ["name","type","extension","size","modified","permissions","owner"];
+    return ["name", "type", "extension", "size", "modified", "permissions", "owner"];
   }
-  
+
   attributeChangedCallback(name, oldValue, newValue) {
     console.log({ name, oldValue, newValue });
     this.render();
@@ -22,15 +22,16 @@ class FileList extends HTMLElement {
 
   render() {
     return `
-    <div id="${this.id}" class="flex border border-t-black text-white">
-    <div class="flex flex-1">
-      <div class="py-3 px-6 text-left">${this.name}</div>
+    <div id="${this.getAttribute("id")}" data-id="${this.getAttribute("id")}" class="flex border-b border-border-default hover:bg-bg-accentEmphasis p-2 rounded 
+    cursor-default">
+    <div data-id="${this.getAttribute("id")}" class="flex flex-1 text-fg-default">
+      <div data-id="${this.getAttribute("id")}" class="py-3 px-6 text-left">${this.getAttribute("name")}</div>
     </div>
-      <div class="flex">
-        <div class="py-3 px-6 text-left">${this.size}</div>
-        <div class="py-3 px-6 text-left">${this.owner}</div>
-        <div class="py-3 px-6 text-left">${this.permissions}</div>
-        <div class="py-3 px-6 text-left">${this.modified}</div>
+      <div data-id="${this.getAttribute("id")}" class="flex text-fg-muted">
+        <div data-id="${this.getAttribute("id")}" class="py-3 px-6 text-left">${this.getAttribute("size")}</div>
+        <div data-id="${this.getAttribute("id")}" class="py-3 px-6 text-left">${this.getAttribute("owner") || "root"}</div>
+        <div data-id="${this.getAttribute("id")}" class="py-3 px-6 text-left">${this.getAttribute("permissions")}</div>
+        <div data-id="${this.getAttribute("id")}" class="py-3 px-6 text-left">${this.getAttribute("modified")}</div>
       </div>
     </div>
     `;

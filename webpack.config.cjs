@@ -19,7 +19,12 @@ module.exports = {
       template: path.resolve(__dirname, '/index.html')
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css' // Updated filename
+      filename: 'style.css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'global.css', to: 'dist' },
+      ],
     })
   ],
   optimization: {},
@@ -33,10 +38,15 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        type: 'javascript/auto'
+      }
     ]
   },
   devServer: {
-    hot: false,
+    hot: true,
     compress: false,
     static: {
       directory: path.join(__dirname, '')
@@ -45,7 +55,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@data': path.resolve(__dirname, 'src/lib')
+      '@lib': path.resolve(__dirname, 'src/lib'),
+      '@data': path.resolve(__dirname, 'data')
     }
   }
 };

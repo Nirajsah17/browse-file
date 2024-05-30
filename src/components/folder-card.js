@@ -19,7 +19,7 @@ class FolderCard extends HTMLElement {
 
   render() {
     return `
-    <div id="${this.id}" class="flex flex-col">
+    <div id="${this.id}" class="flex flex-col text-fg-default hover:bg-bg-accentEmphasis p-2 rounded cursor-default">
     <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -30,13 +30,14 @@ class FolderCard extends HTMLElement {
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="text-white h-12 w-12"
+    class="text-fg-default h-12 w-12"
+    data-id="${this.getAttribute("id")}"
     >
     <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z">
     </path>
     </svg>
-      <span class="text-white text-sm mt-2">${this.name}</span>
-      <span class="text-gray-400 text-xs">${this.fileCount} items</span>
+      <span data-id="${this.getAttribute("id")}" class="text-fg-default text-sm mt-2">${this.name}</span>
+      <span data-id="${this.getAttribute("id")}" class="text-fg-muted text-xs">${this.fileCount} items</span>
     </div>
     `;
   }
