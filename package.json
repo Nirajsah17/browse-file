@@ -1,8 +1,10 @@
 {
   "name": "filesystem",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple and configurable filesystem browser",
+  "author": "Niraj Sah <nirajnsp5@gmail.com>",
   "main": "index.js",
+  "contributors": [],
   "scripts": {
     "build:css": "npx tailwindcss -i ./src/tailwind.css -o style.css",
     "dev": "npm run build:css && webpack serve --mode development",
@@ -10,8 +12,40 @@
     "build:dev": "npm run build:css && webpack --mode development",
     "build:prod": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "",
+  "exports": {
+    ".": {
+      "default": "./main.js"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    ".npmrc",
+    "src/",
+    "data/",
+    "assets/",
+    "build/"
+  ],
+  "readmeFilename": "README.md",
+  "publishConfig": {
+    "registry": ""
+  },
+  "keywords": [
+    "filesystem",
+    "widgets",
+    "file",
+    "folder",
+    "list",
+    "browser",
+    "ui",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nirajsah17/browse-file.git"
+  },
+  "bugs": {},
+  "homepage": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.24.6",
@@ -23,5 +57,8 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
+  },
+  "engines": {
+    "node": ">= v12.16.2"
   }
 }
