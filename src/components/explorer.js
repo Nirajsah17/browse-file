@@ -1,5 +1,6 @@
 import directory from "@data/filesystem.json";
 import { listContents } from "@lib/utils.js";
+import { getBreadcrumbPath } from "@lib/utils.js";
 
 class Explorer extends HTMLElement {
   constructor() {
@@ -12,6 +13,7 @@ class Explorer extends HTMLElement {
     this.innerHTML = `
     <div class="flex flex-col w-full h-full justify-between">
       <div class="flex flex-row h-7">
+        <fx-navigator id="navigator"></fx-navigator>
       </div>
       <div id="explorer-content" class="flex flex-1"></div>
       <div class="items-center justify-center">Footer</div>
@@ -30,6 +32,10 @@ class Explorer extends HTMLElement {
   render(viewType=this.view) {
     if(!this.viewList.includes(viewType)) return
     const list = listContents(this.fileSystem, this.activeId);
+    const paths = getBreadcrumbPath(this.fileSystem, this.activeId);
+    const breadcrumb = this.querySelector('#navigator');
+    console.log(breadcrumb);
+    breadcrumb.render(paths) 
     console.log(list);
     if(!list.length) return 'Empty'
     if(viewType == "list"){
