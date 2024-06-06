@@ -5,7 +5,9 @@ import { FolderList } from "./src/index.js";
 import { Explorer } from "./src/index.js";
 import { Navigator } from "./src/index.js";
 
+import "./global.css";
 import "./src/tailwind.css"
+
 customElements.define("fx-file-card", FileCard);
 customElements.define("fx-folder-card", FolderCard);
 customElements.define("fx-file-list", FileList);
