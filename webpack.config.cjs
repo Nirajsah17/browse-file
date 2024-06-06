@@ -21,11 +21,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'global.css', to: 'dist' },
-      ],
-    })
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: 'global.css', to: 'dist' },
+    //   ],
+    // })
   ],
   optimization: {},
   module: {

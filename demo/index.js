@@ -1,0 +1,136 @@
+const data = {
+  "name": "root",
+  "id": 1,
+  "type": "directory",
+  "created": "2024-01-01T12:00:00Z",
+  "modified": "2024-05-01T12:00:00Z",
+  "permissions": "rwxr-xr-x",
+  "children": [
+    {
+      "name": "Documents",
+      "id": 2,
+      "type": "directory",
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rwxr-xr-x",
+      "children": [
+        {
+          "name": "Work",
+          "id": 3,
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "report.docx",
+              "id": 4,
+              "type": "file",
+              "size": 15000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            },
+            {
+              "name": "presentation.pptx",
+              "id": 5,
+              "type": "file",
+              "size": 45000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        },
+        {
+          "name": "Personal",
+          "id": 6,
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "diary.txt",
+              "id": 7,
+              "type": "file",
+              "size": 5000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Photos",
+      "id": 8,
+      "type": "directory",
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rwxr-xr-x",
+      "children": [
+        {
+          "name": "Vacations",
+          "id": 9,
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "beach.png",
+              "id": 10,
+              "type": "file",
+              "size": 600000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            },
+            {
+              "name": "mountains.jpg",
+              "id": 11,
+              "type": "file",
+              "size": 800000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        },
+        {
+          "name": "Events",
+          "id": 12,
+          "type": "directory",
+          "created": "2024-01-01T12:00:00Z",
+          "modified": "2024-05-01T12:00:00Z",
+          "permissions": "rwxr-xr-x",
+          "children": [
+            {
+              "name": "wedding.jpg",
+              "id": 13,
+              "type": "file",
+              "size": 950000,
+              "created": "2024-01-01T12:00:00Z",
+              "modified": "2024-05-01T12:00:00Z",
+              "permissions": "rw-r--r--"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "notes.txt",
+      "id": 14,
+      "type": "file",
+      "size": 3000,
+      "created": "2024-01-01T12:00:00Z",
+      "modified": "2024-05-01T12:00:00Z",
+      "permissions": "rw-r--r--"
+    }
+  ]
+}
+
+const app = new FileExplorer("app");
+app.setData(data);
